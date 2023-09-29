@@ -1,0 +1,15 @@
+{
+  "name": "inventory-php-boostrap-jquery",
+  "version": "0.0.1",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Joel Alvarez Mexia (https://github.com/jeresoftx)",
+  "license": "ISC",
+  "devDependencies": {
+    "prettier": "^3.0.3"
+  }
+}

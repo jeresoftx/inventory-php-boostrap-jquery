@@ -1,0 +1,43 @@
+lockfileVersion: "6.0"
+
+settings:
+  autoInstallPeers: true
+  excludeLinksFromLockfile: false
+
+dependencies:
+  bootstrap:
+    specifier: 5.3.2
+    version: 5.3.2(@popperjs/core@2.11.8)
+
+devDependencies:
+  prettier:
+    specifier: ^3.0.3
+    version: 3.0.3
+
+packages:
+  /@popperjs/core@2.11.8:
+    resolution:
+      {
+        integrity: sha512-P1st0aksCrn9sGZhp8GMYwBnQsbvAWsZAX44oXNNvLHGqAOcoVxmjZiohstwQ7SqKnbR47akdNi+uleWD8+g6A==,
+      }
+    dev: false
+
+  /bootstrap@5.3.2(@popperjs/core@2.11.8):
+    resolution:
+      {
+        integrity: sha512-D32nmNWiQHo94BKHLmOrdjlL05q1c8oxbtBphQFb9Z5to6eGRDCm0QgeaZ4zFBHzfg2++rqa2JkqCcxDy0sH0g==,
+      }
+    peerDependencies:
+      "@popperjs/core": ^2.11.8
+    dependencies:
+      "@popperjs/core": 2.11.8
+    dev: false
+
+  /prettier@3.0.3:
+    resolution:
+      {
+        integrity: sha512-L/4pUDMxcNa8R/EthV08Zt42WBO4h1rarVtK0K+QJG0X187OLo7l699jWw0GKuwzkPQ//jMFA/8Xm6Fh3J/DAg==,
+      }
+    engines: { node: ">=14" }
+    hasBin: true
+    dev: true

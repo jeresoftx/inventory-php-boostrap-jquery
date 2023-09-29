@@ -1,0 +1,5 @@
+/vendor/
+.docker/volumes/apache-logs/
+.docker/volumes/mysql-data/
+node_modules
+.DS_Store

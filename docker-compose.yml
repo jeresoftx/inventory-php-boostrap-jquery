@@ -1,0 +1,32 @@
+version: "3.7"
+
+services:
+  apache:
+    container_name: ascendion-apache
+    build: ./.docker
+    image: apache
+    ports:
+      - "8083:80"
+    links:
+      - db
+    volumes:
+      # Mount source-code for development
+      - ./src:/var/www/html/
+      - ./.docker/volumes/apache-logs:/var/log/apache2/
+    extra_hosts:
+      - host.docker.internal:host-gateway
+
+  db:
+    image: mysql:latest
+    container_name: ascendion-mysql
+    ports:
+      - "3306:3306"
+    volumes:
+      - ./.docker/volumes/mysql-data:/var/lib/mysql
+      - ./.docker/conf/mysql-config.cnf:/etc/mysql/conf.d/config.cnf
+      - ./.docker/data/init-data.sql:/docker-entrypoint-initdb.d/init-data.sql
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: ascendion
+      MYSQL_USER: jeresoft
+      MYSQL_PASSWORD: cochiverde
